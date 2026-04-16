@@ -22,40 +22,39 @@
             font-size: 1.3em; color: #222; margin-bottom: 25px; 
             font-weight: 600; max-width: 650px; margin-left: auto; margin-right: auto; padding: 0 20px; 
         }
-        .lang-icons { margin-bottom: 30px; }
-        .lang-icons img { width: 30px; height: 30px; margin: 0 6px; transition: transform 0.3s ease; cursor: pointer; }
-        .lang-icons img:hover { transform: scale(1.3); }
+        /* Dil İkonları Bölümü */
+        .lang-icons { margin-bottom: 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 0 20px; }
+        .lang-icons img { width: 32px; height: 32px; transition: transform 0.3s ease; cursor: default; }
+        .lang-icons img:hover { transform: scale(1.25); }
+        
         .store-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 50px; flex-wrap: wrap; }
         .store-btn { transition: transform 0.3s ease; }
         .store-btn:hover { transform: scale(1.08); }
-        .store-btn img { width: 200px; height: 80px; display: block; border-radius: 10px; }
+        .store-btn img { width: 180px; height: auto; display: block; border-radius: 10px; }
         
         .gallery-wrapper { width: 100%; display: flex; justify-content: center; margin-bottom: 40px; }
         .screenshot-gallery { 
-            display: flex; overflow-x: auto; gap: 25px; padding: 60px 40px; margin-top: -40px; 
-            max-width: 100%; scrollbar-width: none; -webkit-overflow-scrolling: touch; align-items: center; 
+            display: flex; overflow-x: auto; gap: 20px; padding: 40px; 
+            max-width: 100%; scrollbar-width: none; -webkit-overflow-scrolling: touch; 
         }
         .screenshot-gallery::-webkit-scrollbar { display: none; }
         .screenshot-gallery img { 
-            flex: 0 0 auto; width: 240px; height: auto; border-radius: 20px; 
-            box-shadow: 0 12px 30px rgba(0,0,0,0.2); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            cursor: pointer; transform-origin: center center; 
+            flex: 0 0 auto; width: 220px; border-radius: 18px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease;
         }
-        .screenshot-gallery img:hover { transform: scale(1.15); z-index: 99; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .screenshot-gallery img:hover { transform: translateY(-10px); }
 
         .footer { 
-            margin-top: 40px; padding: 40px 20px 60px 20px; display: flex; 
+            margin-top: 40px; padding: 40px 20px; display: flex; 
             justify-content: space-between; align-items: center; max-width: 1000px; 
-            margin-left: auto; margin-right: auto; font-size: 0.9em; 
+            margin-left: auto; margin-right: auto; font-size: 0.9em; border-top: 1px solid rgba(0,0,0,0.1);
         }
-        .footer-left { color: #444; font-weight: 500; }
         .footer-right { display: flex; gap: 20px; }
         .footer-right a { color: #000; text-decoration: none; font-weight: 700; }
         
         @media (max-width: 768px) { 
             .footer { flex-direction: column; gap: 20px; text-align: center; } 
-            .footer-right { flex-direction: column; gap: 10px; } 
-            .screenshot-gallery img { width: 200px; } 
+            .screenshot-gallery img { width: 180px; } 
             h1 { font-size: 2.2em; }
         }
     </style>
@@ -63,11 +62,19 @@
 <body>
     <img src="swiftsolve_logo.png" alt="SwiftSolve Logo" class="logo">
     <h1>SwiftSolve</h1>
-    <p class="description">Solve math problems at lightning speed and break records! <br> Solo, random matches, or with friends.</p>
+    <p class="description">Master mental math! Solve fast, compete with friends, and climb the global leaderboard.</p>
     
     <div class="lang-icons">
         <img src="eng.png" title="English">
         <img src="tur.png" title="Turkish">
+        <img src="ger.png" title="German">
+        <img src="fra.png" title="French">
+        <img src="esp.png" title="Spanish">
+        <img src="ita.png" title="Italian">
+        <img src="por.png" title="Portuguese">
+        <img src="jap.png" title="Japanese">
+        <img src="kor.png" title="Korean">
+        <img src="chi.png" title="Chinese">
     </div>
     
     <div class="store-container">
@@ -78,17 +85,16 @@
     <div class="gallery-wrapper">
         <div class="screenshot-gallery">
             <img src="1.png"><img src="2.png"><img src="3.png">
-            <img src="4.png"><img src="5.png"><img src="6.png">
-            <img src="7.png">
+            <img src="4.png"><img src="5.png"><img src="6.png"><img src="7.png">
         </div>
     </div>
 
     <div class="footer">
         <div class="footer-left">© 2026 SwiftSolve. All rights reserved.</div>
         <div class="footer-right">
-            <a href="terms.html">Terms & Conditions</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="support.html">Contact</a>
+            <a href="terms.html">Terms</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="support.html">Support</a>
         </div>
     </div>
 </body>
